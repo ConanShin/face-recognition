@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		311F302024080F83007C0267 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311F301F24080F83007C0267 /* BaseViewController.swift */; };
 		311F3023240897EA007C0267 /* FaceDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311F3022240897EA007C0267 /* FaceDetectionView.swift */; };
-		313491122409362A0076EA8A /* TinyConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313491112409362A0076EA8A /* TinyConstraints.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		313491132409362A0076EA8A /* TinyConstraints.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 313491112409362A0076EA8A /* TinyConstraints.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		312034AF24094CB900977BC7 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 312034AE24094CB900977BC7 /* TinyConstraints */; };
 		3138EE972407C67800E5DF5C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3138EE962407C67800E5DF5C /* NavigationController.swift */; };
 		31670090240792A100F67E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3167008F240792A100F67E19 /* AppDelegate.swift */; };
 		31670092240792A100F67E19 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31670091240792A100F67E19 /* MainViewController.swift */; };
@@ -21,31 +20,11 @@
 		31E347932408B08000D07278 /* NewFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E347922408B08000D07278 /* NewFaceView.swift */; };
 		31E347952408B8F800D07278 /* FaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E347942408B8F800D07278 /* FaceListView.swift */; };
 		31E347982408BB2300D07278 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E347972408BB2300D07278 /* CameraView.swift */; };
-		31F7557F24093A720096135C /* TinyConstraints in Resources */ = {isa = PBXBuildFile; fileRef = 31349118240937B90076EA8A /* TinyConstraints */; };
-		33E0B0C8D1946093C53CC51A /* libPods-FaceRecognition.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5E79ED1B5DE86049AF1FB9 /* libPods-FaceRecognition.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		31C2957F240933AF0095F9D4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				313491132409362A0076EA8A /* TinyConstraints.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		21F2E2FE70710BA7BD7AF793 /* Pods-FaceRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceRecognition.debug.xcconfig"; path = "Target Support Files/Pods-FaceRecognition/Pods-FaceRecognition.debug.xcconfig"; sourceTree = "<group>"; };
 		311F301F24080F83007C0267 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		311F3022240897EA007C0267 /* FaceDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionView.swift; sourceTree = "<group>"; };
-		3134910E240935620076EA8A /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		313491112409362A0076EA8A /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31349118240937B90076EA8A /* TinyConstraints */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TinyConstraints; path = Pods/TinyConstraints/TinyConstraints; sourceTree = "<group>"; };
 		3138EE942407C51900E5DF5C /* API */ = {isa = PBXFileReference; lastKnownFileType = folder; name = API; path = ../CarPark/CarPark/API; sourceTree = "<group>"; };
 		3138EE962407C67800E5DF5C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		3167008C240792A100F67E19 /* FaceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,25 +34,9 @@
 		31670096240792A300F67E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31670098240792A300F67E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3167009E240793C200F67E19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = ../../../Downloads/MasterTinyConstraintsResources/Colors.xcassets; sourceTree = "<group>"; };
-		31C295682408D6130095F9D4 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31C29572240933240095F9D4 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31C29574240933350095F9D4 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31C2957A240933940095F9D4 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31C2957C240933AF0095F9D4 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31C29582240934010095F9D4 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E347922408B08000D07278 /* NewFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFaceView.swift; sourceTree = "<group>"; };
 		31E347942408B8F800D07278 /* FaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceListView.swift; sourceTree = "<group>"; };
 		31E347972408BB2300D07278 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		31E347992408C80500D07278 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31E3479D2408C88600D07278 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31E347A62408CAD300D07278 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31E347AA2408CBC500D07278 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31E347AE2408CD3200D07278 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31E347B12408CD9600D07278 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31E347B32408CE0500D07278 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31E347B72408D03300D07278 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B5E79ED1B5DE86049AF1FB9 /* libPods-FaceRecognition.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FaceRecognition.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4F0929E64B404757E841552 /* Pods-FaceRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceRecognition.release.xcconfig"; path = "Target Support Files/Pods-FaceRecognition/Pods-FaceRecognition.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				313491122409362A0076EA8A /* TinyConstraints.framework in Frameworks */,
-				33E0B0C8D1946093C53CC51A /* libPods-FaceRecognition.a in Frameworks */,
+				312034AF24094CB900977BC7 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,12 +64,9 @@
 		31670083240792A100F67E19 = {
 			isa = PBXGroup;
 			children = (
-				31349118240937B90076EA8A /* TinyConstraints */,
 				3138EE942407C51900E5DF5C /* API */,
 				3167008E240792A100F67E19 /* FaceRecognition */,
 				3167008D240792A100F67E19 /* Products */,
-				B6FC8FF8DCCE4D3661FC28E0 /* Pods */,
-				F2A6C7DE1A8F84F39B4A6351 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,68 +103,25 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
-		B6FC8FF8DCCE4D3661FC28E0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				21F2E2FE70710BA7BD7AF793 /* Pods-FaceRecognition.debug.xcconfig */,
-				E4F0929E64B404757E841552 /* Pods-FaceRecognition.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		F2A6C7DE1A8F84F39B4A6351 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				313491112409362A0076EA8A /* TinyConstraints.framework */,
-				3134910E240935620076EA8A /* TinyConstraints.framework */,
-				31C29582240934010095F9D4 /* TinyConstraints.framework */,
-				31C2957C240933AF0095F9D4 /* TinyConstraints.framework */,
-				31C2957A240933940095F9D4 /* TinyConstraints.framework */,
-				31C29574240933350095F9D4 /* TinyConstraints.framework */,
-				31C29572240933240095F9D4 /* TinyConstraints.framework */,
-				31C295682408D6130095F9D4 /* TinyConstraints.framework */,
-				31E347B72408D03300D07278 /* TinyConstraints.framework */,
-				31E347B32408CE0500D07278 /* TinyConstraints.framework */,
-				31E347B12408CD9600D07278 /* TinyConstraints.framework */,
-				31E347AE2408CD3200D07278 /* TinyConstraints.framework */,
-				31E347AA2408CBC500D07278 /* TinyConstraints.framework */,
-				31E347A62408CAD300D07278 /* TinyConstraints.framework */,
-				31E3479D2408C88600D07278 /* TinyConstraints.framework */,
-				31E347992408C80500D07278 /* TinyConstraints.framework */,
-				5B5E79ED1B5DE86049AF1FB9 /* libPods-FaceRecognition.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		31C295702409317C0095F9D4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3167008B240792A100F67E19 /* FaceRecognition */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3167009B240792A300F67E19 /* Build configuration list for PBXNativeTarget "FaceRecognition" */;
 			buildPhases = (
-				4C11F05B0A7353E4087D59AB /* [CP] Check Pods Manifest.lock */,
-				31C295702409317C0095F9D4 /* Headers */,
 				31670088240792A100F67E19 /* Sources */,
 				31670089240792A100F67E19 /* Frameworks */,
 				3167008A240792A100F67E19 /* Resources */,
-				31C2957F240933AF0095F9D4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FaceRecognition;
+			packageProductDependencies = (
+				312034AE24094CB900977BC7 /* TinyConstraints */,
+			);
 			productName = FaceRecognition;
 			productReference = 3167008C240792A100F67E19 /* FaceRecognition.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 31670083240792A100F67E19;
+			packageReferences = (
+				312034AD24094CB900977BC7 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = 3167008D240792A100F67E19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -248,7 +167,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31F7557F24093A720096135C /* TinyConstraints in Resources */,
 				31C2956F24092D8E0095F9D4 /* LaunchScreen.storyboard in Resources */,
 				31C2956E24092D840095F9D4 /* Colors.xcassets in Resources */,
 				31C2956D24092D810095F9D4 /* Assets.xcassets in Resources */,
@@ -257,31 +175,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4C11F05B0A7353E4087D59AB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FaceRecognition-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31670088240792A100F67E19 /* Sources */ = {
@@ -429,7 +322,6 @@
 		};
 		3167009C240792A300F67E19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21F2E2FE70710BA7BD7AF793 /* Pods-FaceRecognition.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,7 +340,6 @@
 		};
 		3167009D240792A300F67E19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4F0929E64B404757E841552 /* Pods-FaceRecognition.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -487,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		312034AD24094CB900977BC7 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		312034AE24094CB900977BC7 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 312034AD24094CB900977BC7 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 31670084240792A100F67E19 /* Project object */;
 }
