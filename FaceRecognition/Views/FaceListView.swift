@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  FaceListView.swift
 //  FaceRecognition
 //
 //  Created by Conan Shin on 2020/02/28.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class FaceListView: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-        
-    func moveTo (view: UIViewController) {
-        self.navigationController?.pushViewController(view, animated: true)
+        title = "Face List"
+        view.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
     }
 }
