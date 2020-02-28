@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  FaceRecognition
 //
-//  Created by 신철민님/Smart Office TF on 2020/02/27.
+//  Created by Conan Shin on 2020/02/28.
 //  Copyright © 2020 Conan Shin. All rights reserved.
 //
 
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         let rootViewController = MainViewController()
-        let navigationController = UINavigationController(rootViewController: rootViewController)
+        let navigationController = NavigationController(rootViewController: rootViewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         return true

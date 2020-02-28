@@ -3,23 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311F302024080F83007C0267 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311F301F24080F83007C0267 /* BaseViewController.swift */; };
+		311F3023240897EA007C0267 /* FaceDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311F3022240897EA007C0267 /* FaceDetectionView.swift */; };
+		3138EE952407C51900E5DF5C /* API in Resources */ = {isa = PBXBuildFile; fileRef = 3138EE942407C51900E5DF5C /* API */; };
+		3138EE972407C67800E5DF5C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3138EE962407C67800E5DF5C /* NavigationController.swift */; };
+		3138EE992407CF4F00E5DF5C /* NavigationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3138EE982407CF4F00E5DF5C /* NavigationButtons.swift */; };
 		31670090240792A100F67E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3167008F240792A100F67E19 /* AppDelegate.swift */; };
 		31670092240792A100F67E19 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31670091240792A100F67E19 /* MainViewController.swift */; };
 		31670094240792A300F67E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31670093240792A300F67E19 /* Assets.xcassets */; };
 		31670097240792A300F67E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31670095240792A300F67E19 /* LaunchScreen.storyboard */; };
+		3167009F240793C200F67E19 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3167009E240793C200F67E19 /* Colors.xcassets */; };
+		316700A1240793C900F67E19 /* TinyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700A0240793C900F67E19 /* TinyView.swift */; };
+		31E347932408B08000D07278 /* NewFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E347922408B08000D07278 /* NewFaceView.swift */; };
+		74BEC4A0614021AC08F67D53 /* Pods_FaceRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF852C09394819AE51A9A551 /* Pods_FaceRecognition.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		311F301F24080F83007C0267 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		311F3022240897EA007C0267 /* FaceDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionView.swift; sourceTree = "<group>"; };
+		3138EE942407C51900E5DF5C /* API */ = {isa = PBXFileReference; lastKnownFileType = folder; name = API; path = ../CarPark/CarPark/API; sourceTree = "<group>"; };
+		3138EE962407C67800E5DF5C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		3138EE982407CF4F00E5DF5C /* NavigationButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtons.swift; sourceTree = "<group>"; };
 		3167008C240792A100F67E19 /* FaceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3167008F240792A100F67E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31670091240792A100F67E19 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		31670093240792A300F67E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31670096240792A300F67E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31670098240792A300F67E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3167009E240793C200F67E19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = ../../../Downloads/MasterTinyConstraintsResources/Colors.xcassets; sourceTree = "<group>"; };
+		316700A0240793C900F67E19 /* TinyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TinyView.swift; path = ../../../Downloads/MasterTinyConstraintsResources/TinyView.swift; sourceTree = "<group>"; };
+		31E347922408B08000D07278 /* NewFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFaceView.swift; sourceTree = "<group>"; };
+		6B87AD5C1D4FF531C4BB9E97 /* Pods-FaceRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceRecognition.debug.xcconfig"; path = "Target Support Files/Pods-FaceRecognition/Pods-FaceRecognition.debug.xcconfig"; sourceTree = "<group>"; };
+		8A3339E24E86FF90879F7423 /* Pods-FaceRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceRecognition.release.xcconfig"; path = "Target Support Files/Pods-FaceRecognition/Pods-FaceRecognition.release.xcconfig"; sourceTree = "<group>"; };
+		DF852C09394819AE51A9A551 /* Pods_FaceRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +47,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74BEC4A0614021AC08F67D53 /* Pods_FaceRecognition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		311F3021240897CC007C0267 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				311F3022240897EA007C0267 /* FaceDetectionView.swift */,
+				31E347922408B08000D07278 /* NewFaceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		31670083240792A100F67E19 = {
 			isa = PBXGroup;
 			children = (
+				3138EE942407C51900E5DF5C /* API */,
 				3167008E240792A100F67E19 /* FaceRecognition */,
 				3167008D240792A100F67E19 /* Products */,
+				B6FC8FF8DCCE4D3661FC28E0 /* Pods */,
+				F2A6C7DE1A8F84F39B4A6351 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +85,36 @@
 		3167008E240792A100F67E19 /* FaceRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				311F3021240897CC007C0267 /* Views */,
 				3167008F240792A100F67E19 /* AppDelegate.swift */,
 				31670091240792A100F67E19 /* MainViewController.swift */,
+				316700A0240793C900F67E19 /* TinyView.swift */,
 				31670093240792A300F67E19 /* Assets.xcassets */,
+				3167009E240793C200F67E19 /* Colors.xcassets */,
 				31670095240792A300F67E19 /* LaunchScreen.storyboard */,
 				31670098240792A300F67E19 /* Info.plist */,
+				3138EE962407C67800E5DF5C /* NavigationController.swift */,
+				3138EE982407CF4F00E5DF5C /* NavigationButtons.swift */,
+				311F301F24080F83007C0267 /* BaseViewController.swift */,
 			);
 			path = FaceRecognition;
+			sourceTree = "<group>";
+		};
+		B6FC8FF8DCCE4D3661FC28E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B87AD5C1D4FF531C4BB9E97 /* Pods-FaceRecognition.debug.xcconfig */,
+				8A3339E24E86FF90879F7423 /* Pods-FaceRecognition.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F2A6C7DE1A8F84F39B4A6351 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF852C09394819AE51A9A551 /* Pods_FaceRecognition.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3167009B240792A300F67E19 /* Build configuration list for PBXNativeTarget "FaceRecognition" */;
 			buildPhases = (
+				32F6663E4F11FB14E17BA5BA /* [CP] Check Pods Manifest.lock */,
 				31670088240792A100F67E19 /* Sources */,
 				31670089240792A100F67E19 /* Frameworks */,
 				3167008A240792A100F67E19 /* Resources */,
+				37B02EE9BDC7A712A2354F89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -119,6 +177,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3167009F240793C200F67E19 /* Colors.xcassets in Resources */,
+				3138EE952407C51900E5DF5C /* API in Resources */,
 				31670094240792A300F67E19 /* Assets.xcassets in Resources */,
 				31670097240792A300F67E19 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -126,13 +186,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32F6663E4F11FB14E17BA5BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceRecognition-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37B02EE9BDC7A712A2354F89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceRecognition/Pods-FaceRecognition-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceRecognition/Pods-FaceRecognition-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceRecognition/Pods-FaceRecognition-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		31670088240792A100F67E19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31E347932408B08000D07278 /* NewFaceView.swift in Sources */,
+				3138EE992407CF4F00E5DF5C /* NavigationButtons.swift in Sources */,
 				31670090240792A100F67E19 /* AppDelegate.swift in Sources */,
+				3138EE972407C67800E5DF5C /* NavigationController.swift in Sources */,
+				316700A1240793C900F67E19 /* TinyView.swift in Sources */,
+				311F302024080F83007C0267 /* BaseViewController.swift in Sources */,
 				31670092240792A100F67E19 /* MainViewController.swift in Sources */,
+				311F3023240897EA007C0267 /* FaceDetectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +374,7 @@
 		};
 		3167009C240792A300F67E19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B87AD5C1D4FF531C4BB9E97 /* Pods-FaceRecognition.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -284,6 +393,7 @@
 		};
 		3167009D240792A300F67E19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A3339E24E86FF90879F7423 /* Pods-FaceRecognition.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
