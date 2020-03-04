@@ -10,6 +10,7 @@ import UIKit
 import TinyConstraints
 
 class MainViewController: BaseViewController {
+    let camera = CameraView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +55,12 @@ class MainViewController: BaseViewController {
     }
     
     @objc func toDetection(sender: UIButton!) {
-        moveTo(view: FaceDetectionView())
+        present(camera.imagePicker, animated: true, completion: nil)
+        camera.takePicture(cb: { faceImage in
+            let nextView = FaceDetectionView()
+            nextView.faceImage = faceImage
+            self.moveTo(view: nextView)
+        })
     }
     
     @objc func toRegister(sender: UIButton!) {

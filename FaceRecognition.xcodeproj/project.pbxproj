@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		311F302024080F83007C0267 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311F301F24080F83007C0267 /* BaseViewController.swift */; };
 		311F3023240897EA007C0267 /* FaceDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311F3022240897EA007C0267 /* FaceDetectionView.swift */; };
 		312034AF24094CB900977BC7 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 312034AE24094CB900977BC7 /* TinyConstraints */; };
+		312034B4240A870F00977BC7 /* Recognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312034B3240A870F00977BC7 /* Recognition.swift */; };
+		312034B6240A873C00977BC7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312034B5240A873B00977BC7 /* Request.swift */; };
+		312034B9240A878800977BC7 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312034B8240A878800977BC7 /* Face.swift */; };
+		312034C1240B721100977BC7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312034C0240B721100977BC7 /* BaseViewController.swift */; };
+		312034C3240B80D200977BC7 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312034C2240B80D200977BC7 /* CameraController.swift */; };
+		312034C7240BE77500977BC7 /* ParamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312034C6240BE77500977BC7 /* ParamButton.swift */; };
 		3138EE972407C67800E5DF5C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3138EE962407C67800E5DF5C /* NavigationController.swift */; };
 		31670090240792A100F67E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3167008F240792A100F67E19 /* AppDelegate.swift */; };
 		31670092240792A100F67E19 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31670091240792A100F67E19 /* MainViewController.swift */; };
-		31C2956C24092D7E0095F9D4 /* API in Resources */ = {isa = PBXBuildFile; fileRef = 3138EE942407C51900E5DF5C /* API */; };
 		31C2956D24092D810095F9D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31670093240792A300F67E19 /* Assets.xcassets */; };
 		31C2956E24092D840095F9D4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3167009E240793C200F67E19 /* Colors.xcassets */; };
 		31C2956F24092D8E0095F9D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31670095240792A300F67E19 /* LaunchScreen.storyboard */; };
@@ -23,9 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		311F301F24080F83007C0267 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		311F3022240897EA007C0267 /* FaceDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionView.swift; sourceTree = "<group>"; };
-		3138EE942407C51900E5DF5C /* API */ = {isa = PBXFileReference; lastKnownFileType = folder; name = API; path = ../CarPark/CarPark/API; sourceTree = "<group>"; };
+		312034B3240A870F00977BC7 /* Recognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognition.swift; sourceTree = "<group>"; };
+		312034B5240A873B00977BC7 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		312034B8240A878800977BC7 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		312034C0240B721100977BC7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		312034C2240B80D200977BC7 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		312034C6240BE77500977BC7 /* ParamButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamButton.swift; sourceTree = "<group>"; };
 		3138EE962407C67800E5DF5C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		3167008C240792A100F67E19 /* FaceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3167008F240792A100F67E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,10 +69,27 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		312034B0240A85F100977BC7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				312034B3240A870F00977BC7 /* Recognition.swift */,
+				312034B5240A873B00977BC7 /* Request.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		312034B7240A877A00977BC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				312034C6240BE77500977BC7 /* ParamButton.swift */,
+				312034B8240A878800977BC7 /* Face.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		31670083240792A100F67E19 = {
 			isa = PBXGroup;
 			children = (
-				3138EE942407C51900E5DF5C /* API */,
 				3167008E240792A100F67E19 /* FaceRecognition */,
 				3167008D240792A100F67E19 /* Products */,
 			);
@@ -81,6 +106,8 @@
 		3167008E240792A100F67E19 /* FaceRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				312034B7240A877A00977BC7 /* Model */,
+				312034B0240A85F100977BC7 /* API */,
 				31E347962408BABF00D07278 /* Camera */,
 				311F3021240897CC007C0267 /* Views */,
 				3167008F240792A100F67E19 /* AppDelegate.swift */,
@@ -90,7 +117,7 @@
 				31670095240792A300F67E19 /* LaunchScreen.storyboard */,
 				31670098240792A300F67E19 /* Info.plist */,
 				3138EE962407C67800E5DF5C /* NavigationController.swift */,
-				311F301F24080F83007C0267 /* BaseViewController.swift */,
+				312034C0240B721100977BC7 /* BaseViewController.swift */,
 			);
 			path = FaceRecognition;
 			sourceTree = "<group>";
@@ -99,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				31E347972408BB2300D07278 /* CameraView.swift */,
+				312034C2240B80D200977BC7 /* CameraController.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -170,7 +198,6 @@
 				31C2956F24092D8E0095F9D4 /* LaunchScreen.storyboard in Resources */,
 				31C2956E24092D840095F9D4 /* Colors.xcassets in Resources */,
 				31C2956D24092D810095F9D4 /* Assets.xcassets in Resources */,
-				31C2956C24092D7E0095F9D4 /* API in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,14 +208,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312034C1240B721100977BC7 /* BaseViewController.swift in Sources */,
 				31E347932408B08000D07278 /* NewFaceView.swift in Sources */,
+				312034B4240A870F00977BC7 /* Recognition.swift in Sources */,
 				31670090240792A100F67E19 /* AppDelegate.swift in Sources */,
 				3138EE972407C67800E5DF5C /* NavigationController.swift in Sources */,
-				311F302024080F83007C0267 /* BaseViewController.swift in Sources */,
+				312034C7240BE77500977BC7 /* ParamButton.swift in Sources */,
 				31E347952408B8F800D07278 /* FaceListView.swift in Sources */,
+				312034C3240B80D200977BC7 /* CameraController.swift in Sources */,
 				31670092240792A100F67E19 /* MainViewController.swift in Sources */,
+				312034B6240A873C00977BC7 /* Request.swift in Sources */,
 				311F3023240897EA007C0267 /* FaceDetectionView.swift in Sources */,
 				31E347982408BB2300D07278 /* CameraView.swift in Sources */,
+				312034B9240A878800977BC7 /* Face.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,59 +7,64 @@
 //
 
 import UIKit
+import AVFoundation
 import MobileCoreServices
 
-class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @IBOutlet var imageView: UIImageView!
-    var newMedia: Bool?
+class CameraView: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    var imagePicker: UIImagePickerController = UIImagePickerController()
+    var callback: ((NSData) -> Void)?
     
-    @IBAction func useCamera(_ sender: Any) {
+    init (control: Bool = false) {
+        super.init()
+        camera(showControl: control)
+        overlay()
+    }
+    
+    func takePicture (cb: @escaping (NSData) -> Void) {
+        callback = cb
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            self.imagePicker.takePicture()
+        })
+        
+    }
+    
+    fileprivate func camera (showControl: Bool) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = .camera
+            imagePicker.cameraDevice = .front
             imagePicker.mediaTypes = [kUTTypeImage as String]
             imagePicker.allowsEditing = false
-            self.present(imagePicker, animated: true, completion: nil)
-            newMedia = true
+            imagePicker.cameraFlashMode = .off
+            imagePicker.showsCameraControls = showControl
+            imagePicker.modalPresentationStyle = .fullScreen
+        } else {
+            let alertController = UIAlertController.init(title: nil, message: "Device has no camera.", preferredStyle: .alert)
+            let okAction = UIAlertAction.init(title: "Alright", style: .default, handler: {(alert: UIAlertAction!) in})
+
+            alertController.addAction(okAction)
+            imagePicker.present(alertController, animated: true, completion: nil)
         }
     }
     
-    @IBAction func useCameraRoll(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
-            let imagePicker = UIImagePickerController()
-            
-            imagePicker.delegate = self
-            imagePicker.sourceType = .photoLibrary
-            imagePicker.mediaTypes = [kUTTypeImage as String]
-            imagePicker.allowsEditing = false
-            
-            self.present(imagePicker, animated: true, completion: nil)
-            newMedia = false
-        }
+    fileprivate func overlay () {
+        let descriptionView = UIView(frame: CGRect(x: 0, y: 0, width: imagePicker.view.frame.size.width, height: 100))
+        descriptionView.backgroundColor = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
+        
+        let text = UILabel()
+        descriptionView.addSubview(text)
+        text.center(in: descriptionView, offset: CGPoint(x: 0, y: 15))
+        text.text = "Please look at the camera"
+        text.font = text.font.withSize(20)
+        
+        imagePicker.cameraOverlayView = descriptionView
     }
     
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let uiImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        let imageData:NSData = uiImage.jpegData(compressionQuality: 0.5)! as NSData
+        let compressedImage =  uiImage.jpegData(compressionQuality: 0.5)! as NSData
         
-        self.dismiss(animated: true, completion: nil)
-        
-        if (newMedia == true) {
-            // 이미지 저장
-            // 성공, 실패 여부를 알려주기 위한 메서드가 호출된다.
-            print(imageData)
-        }
-    }
-    // 실패 여부 알려주는 메서드 (성공 실패 상관없이 액션이 끝나면 호출됨)
-    @objc func image(image: UIImage, didFinishSavingWithError error: ErrorPointer, contextInfo:UnsafeRawPointer) {
-        if error != nil {
-            let alert = UIAlertController(title: "Detection Failed", message: "Failed to detect face", preferredStyle: UIAlertController.Style.alert)
-            
-            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            alert.addAction(cancelAction)
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
+        self.callback!(compressedImage)
+        imagePicker.dismiss(animated: true, completion: nil)
+    } 
 }
