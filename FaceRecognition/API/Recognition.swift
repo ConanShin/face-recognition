@@ -9,40 +9,36 @@
 import UIKit
 import Foundation
 
-public class Rekognition: UIViewController {
-    var ADD_URL="https://j1po3p7ys1.execute-api.ap-northeast-2.amazonaws.com/dev/face"
-    var SEARCH_URL="https://j1po3p7ys1.execute-api.ap-northeast-2.amazonaws.com/dev/face/search"
-    var LIST_URL="https://j1po3p7ys1.execute-api.ap-northeast-2.amazonaws.com/dev/face"
-    var DELETE_URL="https://j1po3p7ys1.execute-api.ap-northeast-2.amazonaws.com/dev/face"
-    var request = Request()
+public class Rekognition {
+    private static let sharedInstance = Rekognition()
     
-    let progress = UILabel()
-    
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    fileprivate func showProgress () {
+    private static var ADD_URL="https://j1po3p7ys1.execute-api.ap-northeast-2.amazonaws.com/dev/face"
+    private static var SEARCH_URL="https://j1po3p7ys1.execute-api.ap-northeast-2.amazonaws.com/dev/face/search"
+    private static var LIST_URL="https://j1po3p7ys1.execute-api.ap-northeast-2.amazonaws.com/dev/face"
+    private static var DELETE_URL="https://j1po3p7ys1.execute-api.ap-northeast-2.amazonaws.com/dev/face"
+    private static var request = Request()
+ 
+    fileprivate static func showProgress () {
         DispatchQueue.main.async {
-            self.view.addSubview(self.progress)
-            self.progress.center(in: self.view)
-            self.progress.text = "Waiting For Response"
+            LoadingHUD.show()
         }
     }
     
-    fileprivate func hideProgress () {
+    fileprivate static func hideProgress () {
         DispatchQueue.main.async {
-            self.progress.removeFromSuperview()
+            LoadingHUD.hide()
         }
     }
     
-    func add (image: NSData, name: String, callback: @escaping () -> Void) {
+    class func add (image: NSData, name: String, callback: @escaping () -> Void) {
+        showProgress()
         let body: NSMutableDictionary = NSMutableDictionary()
         body.setValue(image.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters), forKey: "data")
         body.setValue(name, forKey: "id")
         
         do {
             try self.request.post(url: URL(string: ADD_URL)!, body: body, completionHandler: { data, response, error in
+                hideProgress()
                 callback()
             })
         } catch {
@@ -50,14 +46,17 @@ public class Rekognition: UIViewController {
         }
     }
     
-    func search (image: NSData, callback: @escaping (String) -> Void) {
+    class func search (image: UIImage, callback: @escaping (String) -> Void) {
+        showProgress()
         let body: NSMutableDictionary = NSMutableDictionary()
-        body.setValue(image.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters), forKey: "data")
+        let imageData = image.jpegData(compressionQuality: 0.5)! as NSData
+        body.setValue(imageData.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters), forKey: "data")
 
         do {
             try self.request.post(url: URL(string: SEARCH_URL)!, body: body, completionHandler: { data, response, error in
                 do {
                     let dict = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! [String:Any]
+                    self.hideProgress()
                     callback(dict["data"] as! String)
                 } catch {
                     print(error)
@@ -68,7 +67,7 @@ public class Rekognition: UIViewController {
         }
     }
     
-    func list (callback: @escaping ([Face]) -> Void) {
+    class func list (callback: @escaping ([Face]) -> Void) {
         showProgress()
         self.request.get(url: URL(string: LIST_URL)!, completionHandler: { data, response, error in
             do {
@@ -85,7 +84,7 @@ public class Rekognition: UIViewController {
         })
     }
     
-    func delete (faceId: String, callback: @escaping () -> Void) {
+    class func delete (faceId: String, callback: @escaping () -> Void) {
         showProgress()
         let body: NSMutableDictionary = NSMutableDictionary()
         body.setValue(faceId, forKey: "data")

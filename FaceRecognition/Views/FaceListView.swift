@@ -9,21 +9,19 @@
 import UIKit
 
 class FaceListView: UIViewController {
-    var restApi = Rekognition()
     var rows: [UIView] = []
     let progress = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Face List"
-        view.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-        view.addSubview(restApi.view)
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         readFaceList()
     }
     
     fileprivate func readFaceList () {
         removeRows()
-        restApi.list(callback: { faces in
+        Rekognition.list(callback: { faces in
             print("faces", faces)
             DispatchQueue.main.async {
                 self.setupView(list: faces)
@@ -44,7 +42,7 @@ class FaceListView: UIViewController {
         for face in list {
             let row = UIView()
             view.addSubview(row)
-            row.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+            row.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             if previousFace == nil {
                 row.top(to: self.navigationController!.navigationBar, offset: 50)
             } else {
@@ -80,7 +78,7 @@ class FaceListView: UIViewController {
     
     @objc fileprivate func deleteFace (sender: ParamButton) {
         removeRows()
-        self.restApi.delete(faceId: sender.params["id"] as! String, callback: {
+        Rekognition.delete(faceId: sender.params["id"] as! String, callback: {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.readFaceList()
             }

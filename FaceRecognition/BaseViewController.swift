@@ -14,7 +14,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func moveTo (view: UIViewController, animated: Bool = true) {
-        self.navigationController?.pushViewController(view, animated: animated)
+    func moveTo (view: UIViewController, animation: Bool = false) {
+        self.navigationController?.pushViewController(view, animated: animation)
     }
 }

@@ -18,8 +18,10 @@
 		3138EE972407C67800E5DF5C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3138EE962407C67800E5DF5C /* NavigationController.swift */; };
 		31670090240792A100F67E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3167008F240792A100F67E19 /* AppDelegate.swift */; };
 		31670092240792A100F67E19 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31670091240792A100F67E19 /* MainViewController.swift */; };
+		3183735C2410BCD700885933 /* LoadingHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3183735B2410BCD700885933 /* LoadingHUD.swift */; };
+		3183735F2410D17800885933 /* Gifu in Frameworks */ = {isa = PBXBuildFile; productRef = 3183735E2410D17800885933 /* Gifu */; };
+		318373612410D3E000885933 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 318373602410D3E000885933 /* loading.gif */; };
 		31C2956D24092D810095F9D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31670093240792A300F67E19 /* Assets.xcassets */; };
-		31C2956E24092D840095F9D4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3167009E240793C200F67E19 /* Colors.xcassets */; };
 		31C2956F24092D8E0095F9D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31670095240792A300F67E19 /* LaunchScreen.storyboard */; };
 		31E347932408B08000D07278 /* NewFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E347922408B08000D07278 /* NewFaceView.swift */; };
 		31E347952408B8F800D07278 /* FaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E347942408B8F800D07278 /* FaceListView.swift */; };
@@ -41,7 +43,12 @@
 		31670093240792A300F67E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31670096240792A300F67E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31670098240792A300F67E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3167009E240793C200F67E19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = ../../../Downloads/MasterTinyConstraintsResources/Colors.xcassets; sourceTree = "<group>"; };
+		3183734D240F9B6400885933 /* CircleProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CircleProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31837351240F9BEF00885933 /* CircleProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CircleProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		318373552410B49100885933 /* CircleProgressBar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CircleProgressBar; path = "Pods/Target Support Files/CircleProgressBar"; sourceTree = "<group>"; };
+		318373562410B4A900885933 /* CircleProgressBar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CircleProgressBar; path = Pods/CircleProgressBar; sourceTree = "<group>"; };
+		3183735B2410BCD700885933 /* LoadingHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHUD.swift; sourceTree = "<group>"; };
+		318373602410D3E000885933 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../Downloads/loading.gif; sourceTree = "<group>"; };
 		31E347922408B08000D07278 /* NewFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFaceView.swift; sourceTree = "<group>"; };
 		31E347942408B8F800D07278 /* FaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceListView.swift; sourceTree = "<group>"; };
 		31E347972408BB2300D07278 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -53,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				312034AF24094CB900977BC7 /* TinyConstraints in Frameworks */,
+				3183735F2410D17800885933 /* Gifu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +100,8 @@
 			children = (
 				3167008E240792A100F67E19 /* FaceRecognition */,
 				3167008D240792A100F67E19 /* Products */,
+				47C5C115E5449F0B03033463 /* Pods */,
+				E564D8FCA1B4016973122012 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +116,7 @@
 		3167008E240792A100F67E19 /* FaceRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				318373602410D3E000885933 /* loading.gif */,
 				312034B7240A877A00977BC7 /* Model */,
 				312034B0240A85F100977BC7 /* API */,
 				31E347962408BABF00D07278 /* Camera */,
@@ -113,11 +124,11 @@
 				3167008F240792A100F67E19 /* AppDelegate.swift */,
 				31670091240792A100F67E19 /* MainViewController.swift */,
 				31670093240792A300F67E19 /* Assets.xcassets */,
-				3167009E240793C200F67E19 /* Colors.xcassets */,
 				31670095240792A300F67E19 /* LaunchScreen.storyboard */,
 				31670098240792A300F67E19 /* Info.plist */,
 				3138EE962407C67800E5DF5C /* NavigationController.swift */,
 				312034C0240B721100977BC7 /* BaseViewController.swift */,
+				3183735B2410BCD700885933 /* LoadingHUD.swift */,
 			);
 			path = FaceRecognition;
 			sourceTree = "<group>";
@@ -129,6 +140,24 @@
 				312034C2240B80D200977BC7 /* CameraController.swift */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		47C5C115E5449F0B03033463 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E564D8FCA1B4016973122012 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				318373552410B49100885933 /* CircleProgressBar */,
+				318373562410B4A900885933 /* CircleProgressBar */,
+				31837351240F9BEF00885933 /* CircleProgressBar.framework */,
+				3183734D240F9B6400885933 /* CircleProgressBar.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +178,7 @@
 			name = FaceRecognition;
 			packageProductDependencies = (
 				312034AE24094CB900977BC7 /* TinyConstraints */,
+				3183735E2410D17800885933 /* Gifu */,
 			);
 			productName = FaceRecognition;
 			productReference = 3167008C240792A100F67E19 /* FaceRecognition.app */;
@@ -180,6 +210,7 @@
 			mainGroup = 31670083240792A100F67E19;
 			packageReferences = (
 				312034AD24094CB900977BC7 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				3183735D2410D17800885933 /* XCRemoteSwiftPackageReference "Gifu" */,
 			);
 			productRefGroup = 3167008D240792A100F67E19 /* Products */;
 			projectDirPath = "";
@@ -195,8 +226,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318373612410D3E000885933 /* loading.gif in Resources */,
 				31C2956F24092D8E0095F9D4 /* LaunchScreen.storyboard in Resources */,
-				31C2956E24092D840095F9D4 /* Colors.xcassets in Resources */,
 				31C2956D24092D810095F9D4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3183735C2410BCD700885933 /* LoadingHUD.swift in Sources */,
 				312034C1240B721100977BC7 /* BaseViewController.swift in Sources */,
 				31E347932408B08000D07278 /* NewFaceView.swift in Sources */,
 				312034B4240A870F00977BC7 /* Recognition.swift in Sources */,
@@ -420,6 +452,14 @@
 				minimumVersion = 4.0.1;
 			};
 		};
+		3183735D2410D17800885933 /* XCRemoteSwiftPackageReference "Gifu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kaishin/Gifu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -427,6 +467,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 312034AD24094CB900977BC7 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
 			productName = TinyConstraints;
+		};
+		3183735E2410D17800885933 /* Gifu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3183735D2410D17800885933 /* XCRemoteSwiftPackageReference "Gifu" */;
+			productName = Gifu;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

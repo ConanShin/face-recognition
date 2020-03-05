@@ -12,7 +12,7 @@ import MobileCoreServices
 
 class CameraView: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePicker: UIImagePickerController = UIImagePickerController()
-    var callback: ((NSData) -> Void)?
+    var callback: ((UIImage) -> Void)?
     
     init (control: Bool = false) {
         super.init()
@@ -20,7 +20,7 @@ class CameraView: NSObject, UIImagePickerControllerDelegate, UINavigationControl
         overlay()
     }
     
-    func takePicture (cb: @escaping (NSData) -> Void) {
+    func takePicture (cb: @escaping (UIImage) -> Void) {
         callback = cb
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             self.imagePicker.takePicture()
@@ -41,7 +41,6 @@ class CameraView: NSObject, UIImagePickerControllerDelegate, UINavigationControl
         } else {
             let alertController = UIAlertController.init(title: nil, message: "Device has no camera.", preferredStyle: .alert)
             let okAction = UIAlertAction.init(title: "Alright", style: .default, handler: {(alert: UIAlertAction!) in})
-
             alertController.addAction(okAction)
             imagePicker.present(alertController, animated: true, completion: nil)
         }
@@ -49,12 +48,13 @@ class CameraView: NSObject, UIImagePickerControllerDelegate, UINavigationControl
     
     fileprivate func overlay () {
         let descriptionView = UIView(frame: CGRect(x: 0, y: 0, width: imagePicker.view.frame.size.width, height: 100))
-        descriptionView.backgroundColor = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
+        descriptionView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
         let text = UILabel()
         descriptionView.addSubview(text)
         text.center(in: descriptionView, offset: CGPoint(x: 0, y: 15))
         text.text = "Please look at the camera"
+        text.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         text.font = text.font.withSize(20)
         
         imagePicker.cameraOverlayView = descriptionView
@@ -62,9 +62,10 @@ class CameraView: NSObject, UIImagePickerControllerDelegate, UINavigationControl
     
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let uiImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        let compressedImage =  uiImage.jpegData(compressionQuality: 0.5)! as NSData
+//        let compressedImage =  uiImage.jpegData(compressionQuality: 0.5)! as NSData
+//        let flippedImage = UIImage(cgImage: uiImage.cgImage!, scale: uiImage.scale, orientation: .leftMirrored)
         
-        self.callback!(compressedImage)
+        self.callback!(uiImage)
         imagePicker.dismiss(animated: true, completion: nil)
     } 
 }
