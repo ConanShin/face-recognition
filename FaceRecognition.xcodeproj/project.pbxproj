@@ -23,6 +23,7 @@
 		318373612410D3E000885933 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 318373602410D3E000885933 /* loading.gif */; };
 		318373762414C2A600885933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318373752414C2A600885933 /* LaunchScreen.storyboard */; };
 		318373782414C55E00885933 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318373772414C55E00885933 /* SplashViewController.swift */; };
+		3183737B2414DC5200885933 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3183737A2414DC5200885933 /* StringExtension.swift */; };
 		31C2956D24092D810095F9D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31670093240792A300F67E19 /* Assets.xcassets */; };
 		31E347932408B08000D07278 /* NewFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E347922408B08000D07278 /* NewFaceView.swift */; };
 		31E347952408B8F800D07278 /* FaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E347942408B8F800D07278 /* FaceListView.swift */; };
@@ -51,6 +52,7 @@
 		318373602410D3E000885933 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../Downloads/loading.gif; sourceTree = "<group>"; };
 		318373752414C2A600885933 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		318373772414C55E00885933 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3183737A2414DC5200885933 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		31E347922408B08000D07278 /* NewFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFaceView.swift; sourceTree = "<group>"; };
 		31E347942408B8F800D07278 /* FaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceListView.swift; sourceTree = "<group>"; };
 		31E347972408BB2300D07278 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -72,7 +74,9 @@
 		311F3021240897CC007C0267 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				312034C0240B721100977BC7 /* BaseViewController.swift */,
 				311F3022240897EA007C0267 /* FaceDetectionView.swift */,
+				31670091240792A100F67E19 /* MainViewController.swift */,
 				31E347922408B08000D07278 /* NewFaceView.swift */,
 				31E347942408B8F800D07278 /* FaceListView.swift */,
 				318373772414C55E00885933 /* SplashViewController.swift */,
@@ -120,20 +124,27 @@
 		3167008E240792A100F67E19 /* FaceRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				318373792414DC3C00885933 /* Extension */,
 				318373602410D3E000885933 /* loading.gif */,
 				312034B7240A877A00977BC7 /* Model */,
 				312034B0240A85F100977BC7 /* API */,
 				31E347962408BABF00D07278 /* Camera */,
 				311F3021240897CC007C0267 /* Views */,
 				3167008F240792A100F67E19 /* AppDelegate.swift */,
-				31670091240792A100F67E19 /* MainViewController.swift */,
 				31670093240792A300F67E19 /* Assets.xcassets */,
 				31670098240792A300F67E19 /* Info.plist */,
 				3138EE962407C67800E5DF5C /* NavigationController.swift */,
-				312034C0240B721100977BC7 /* BaseViewController.swift */,
 				3183735B2410BCD700885933 /* LoadingHUD.swift */,
 			);
 			path = FaceRecognition;
+			sourceTree = "<group>";
+		};
+		318373792414DC3C00885933 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3183737A2414DC5200885933 /* StringExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		31E347962408BABF00D07278 /* Camera */ = {
@@ -246,6 +257,7 @@
 				312034C1240B721100977BC7 /* BaseViewController.swift in Sources */,
 				31E347932408B08000D07278 /* NewFaceView.swift in Sources */,
 				312034B4240A870F00977BC7 /* Recognition.swift in Sources */,
+				3183737B2414DC5200885933 /* StringExtension.swift in Sources */,
 				31670090240792A100F67E19 /* AppDelegate.swift in Sources */,
 				3138EE972407C67800E5DF5C /* NavigationController.swift in Sources */,
 				312034C7240BE77500977BC7 /* ParamButton.swift in Sources */,

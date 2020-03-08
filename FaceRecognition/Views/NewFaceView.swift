@@ -97,12 +97,18 @@ class NewFaceView: UIViewController {
             return present(alertController, animated: true, completion: nil)
         }
         let name = textField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        if name == "" {
-            let alertController = UIAlertController.init(title: "", message: "이름을 넣어주세요.", preferredStyle: .alert)
+        if name.regexCheck(regex: "[a-z0-9]") == false {
+            let alertController = UIAlertController.init(title: "", message: "이름으로 알파벳과 숫자만 가능합니다.", preferredStyle: .alert)
             let okAction = UIAlertAction.init(title: "알겠습니다", style: .default, handler: {(alert: UIAlertAction!) in})
             alertController.addAction(okAction)
             return present(alertController, animated: true, completion: nil)
         }
+//        if name == "" {
+//            let alertController = UIAlertController.init(title: "", message: "이름을 넣어주세요.", preferredStyle: .alert)
+//            let okAction = UIAlertAction.init(title: "알겠습니다", style: .default, handler: {(alert: UIAlertAction!) in})
+//            alertController.addAction(okAction)
+//            return present(alertController, animated: true, completion: nil)
+//        }
         let imageData = imageTaken!.jpegData(compressionQuality: 0.5)
         Rekognition.add(image: imageData! as NSData, name: name, callback: {
             DispatchQueue.main.async {
