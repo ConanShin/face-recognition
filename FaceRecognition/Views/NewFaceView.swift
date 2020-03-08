@@ -9,7 +9,7 @@
 import UIKit
 
 class NewFaceView: UIViewController {
-//    let camera = CameraView(control: true)
+    let camera = CameraView(control: true)
     var imageTaken: UIImage? = nil
     let pictureArea = UIView()
     let textField = UITextField()
@@ -112,14 +112,14 @@ class NewFaceView: UIViewController {
     }
     
     @objc fileprivate func showCamera () {
-//        camera.callback = { image in
-//            self.removeEmptyPerson()
-//            self.imageTaken = image
-//            let face = UIImageView(frame: CGRect(x: 0, y: -50, width: 200, height: 250))
-//            face.image = image
-//            self.pictureArea.addSubview(face)
-//        }
-//        present(camera.imagePicker, animated: true, completion: nil)
+        camera.callback = { image in
+            self.removeEmptyPerson()
+            self.imageTaken = image
+            let face = UIImageView(frame: CGRect(x: 0, y: -50, width: 200, height: 250))
+            face.image = image
+            self.pictureArea.addSubview(face)
+        }
+        present(camera.imagePicker, animated: true, completion: nil)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
